@@ -2,7 +2,7 @@ var PLAY = 1;
 var END = 0;
 var gameState = PLAY;
 
-var trex, trex_running, trex_collided;
+var trex, trex_running;
 var ground, invisibleGround, groundImage;
 
 
@@ -10,7 +10,7 @@ var ground, invisibleGround, groundImage;
 function preload(){
   trex_running =   loadAnimation("images/trex1.png","images/trex3.png","images/trex4.png");
   groundImage = loadImage("images/ground2.png");
-  
+
 }
 
 function setup() {
@@ -19,7 +19,6 @@ function setup() {
   trex = createSprite(50,180,20,50);
   
   trex.addAnimation("running", trex_running);
-  trex.addAnimation("collided", trex_collided);
   trex.scale = 0.5;
   
   ground = createSprite(200,180,400,20);
